@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIHUBS - Nền tảng giúp bạn làm chủ AI với thư viện Prompt và Công cụ được tuyển chọn kỹ lưỡng</title>
+    <meta name="description"
+        content="Khóa học AI cho người mới + Thư viện prompt thực chiến. Học cách sử dụng AI để tăng năng suất x2-3 lần.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">AIHUBS</div>
+                <nav class="nav">
+                    <a href="#thu-vien-prompt">Thư viện Prompt</a>
+                    <a href="#khoa-hoc-ai">Khóa học AI</a>
+                    <a href="tools-directory.html">Công cụ AI</a>
+                    <a href="#bang-gia">Bảng giá</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#" class="nav-login">Đăng nhập</a>
+                    <a href="#bang-gia" class="btn btn-primary">Bắt đầu ngay</a>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="social-proof">✨ 1.247+ người đã tăng năng suất x2–3 lần nhờ AIHUBS</p>
+                <h1 class="hero-title">
+                    Người biết dùng AI<br>
+                    sẽ thay thế<br>
+                    người không biết.
+                </h1>
+                <p class="hero-subtitle">
+                    Khóa học AI dành cho người mới + Thư viện prompt thực chiến = nền tảng tối thiểu để bạn không bị bỏ
+                    lại phía sau.
+                </p>
+                <div class="hero-cta">
+                    <a href="#bang-gia" class="btn btn-primary btn-large">Đầu tư ngay</a>
+                    <a href="#quyen-loi" class="btn btn-outline btn-large">Xem quyền lợi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="container">
+            <h2 class="section-title-small">Được tin dùng bởi 1.000+ nhà sáng tạo</h2>
+            <div class="trust-logos">
+                <div class="trust-logo">👥</div>
+                <div class="trust-logo">🎯</div>
+                <div class="trust-logo">💼</div>
+                <div class="trust-logo">🚀</div>
+                <div class="trust-logo">⭐</div>
+                <div class="trust-logo">💡</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cong-cu-ai" class="tools-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Top 100 Công Cụ AI Tốt Nhất</h2>
+                <p class="section-subtitle">
+                    Đa số AI tools chỉ để "nghịch". AIHUBS chọn ra các công cụ thực sự giúp tạo ra tiền và tiết kiệm
+                    thời gian.
+                </p>
+            </div>
+            <div class="tools-grid" id="toolsGrid">
+                <!-- Tools will be loaded dynamically -->
+            </div>
+            <div class="section-footer">
+                <a href="tools-directory.html" class="btn btn-primary" style="margin: 0 auto;">
+                    Xem thêm công cụ →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="bang-gia" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Giá bằng một bữa lẩu.<br>Giá trị bằng cả sự nghiệp.</h2>
+                <p class="section-subtitle">
+                    1 bữa nhậu = 500.000đ. Vui 3 tiếng, quên ngay.<br>
+                    Đầu tư 1 lần vào kỹ năng AI = Tăng thu nhập mãi mãi.
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">HỘI VIÊN PRO</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">299.000 ₫</span>
+                            <span class="price-period">/ 3 tháng</span>
+                        </div>
+                        <p class="pricing-description">
+                            Dành cho người mới bắt đầu "thử nước". Học cơ bản, làm được việc ngay. Không màu mè.
+                        </p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Truy cập Thư viện Prompt AIHUBS</li>
+                        <li>✓ Khóa học AI cho người mới</li>
+                        <li>✓ Update công cụ mới hàng tuần</li>
+                        <li>✓ Tham gia cộng đồng Private cơ bản</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block">Đăng ký gói Pro</a>
+                </div>
+
+                <div class="pricing-card pricing-card-featured">
+                    <div class="best-choice-badge">BEST CHOICE</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">HỘI VIÊN MASTER</h3>
+                        <div class="pricing-price">
+                            <span class="price-old">2.500.000 ₫</span>
+                            <span class="price-amount">499.000 ₫</span>
+                            <span class="price-period">/ 6 tháng</span>
+                        </div>
+                        <p class="pricing-save">Tiết kiệm 30%</p>
+                        <p class="pricing-description">
+                            Cho người nghiêm túc muốn bứt phá. Full quyền lợi + quà tặng độc quyền.
+                        </p>
+                    </div>
+
+                    <div class="pricing-section-group">
+                        <h4 class="pricing-group-title">QUYỀN LỢI CỐT LÕI</h4>
+                        <ul class="pricing-features">
+                            <li>✓ Thư viện Prompt AI Lớn nhất</li>
+                            <li>✓ Full khóa học AI (cơ bản + nâng cao)</li>
+                            <li>✓ Bản đồ kiếm tiền với AI</li>
+                            <li>✓ Danh sách AI "in tiền" độc quyền</li>
+                            <li>✓ Cộng đồng kín với mentor</li>
+                            <li>✓ Giảm 20% các khóa chuyên sâu</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-section-group">
+                        <h4 class="pricing-group-title">QUÀ TẶNG ĐỘC QUYỀN</h4>
+                        <ul class="pricing-features pricing-features-bonus">
+                            <li>🎁 Trợ lý GPT riêng</li>
+                            <li>🎁 Bộ Custom GPTs tự động hóa</li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="btn btn-primary btn-block btn-large">Đầu tư ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kiến thức thực chiến</h2>
+                <p class="section-subtitle">
+                    Không lý thuyết suông. Hướng dẫn cách áp dụng AI vào công việc thực tế ngay lập tức.
+                </p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-category">AI Writing</div>
+                    <div class="blog-meta">
+                        <span>15 Dec 2025</span>
+                        <span>•</span>
+                        <span>5 phút đọc</span>
+                    </div>
+                    <h3 class="blog-title">Cách viết content bán hàng bằng ChatGPT trong 10 phút</h3>
+                    <p class="blog-excerpt">
+                        Hướng dẫn chi tiết từng bước để tạo nội dung bán hàng chuyên nghiệp với AI. Kèm template prompt
+                        đã test thực tế.
+                    </p>
+                    <a href="#" class="blog-link">Đọc ngay →</a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-category">AI Image</div>
+                    <div class="blog-meta">
+                        <span>12 Dec 2025</span>
+                        <span>•</span>
+                        <span>8 phút đọc</span>
+                    </div>
+                    <h3 class="blog-title">Tạo ảnh sản phẩm đẹp mắt không cần nhiếp ảnh gia</h3>
+                    <p class="blog-excerpt">
+                        Sử dụng Midjourney và DALL-E để tạo hình ảnh sản phẩm chất lượng cao. Case study thực tế từ các
+                        brand Việt.
+                    </p>
+                    <a href="#" class="blog-link">Đọc ngay →</a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-category">AI Workflow</div>
+                    <div class="blog-meta">
+                        <span>8 Dec 2025</span>
+                        <span>•</span>
+                        <span>12 phút đọc</span>
+                    </div>
+                    <h3 class="blog-title">Tự động hóa 80% công việc marketing với Make + AI</h3>
+                    <p class="blog-excerpt">
+                        Blueprint hoàn chỉnh để xây dựng hệ thống tự động: từ lên ý tưởng, viết content đến đăng bài và
+                        phân tích.
+                    </p>
+                    <a href="#" class="blog-link">Đọc ngay →</a>
+                </article>
+            </div>
+            <div class="section-footer">
+                <a href="#" class="link-arrow">Đọc tất cả bài viết →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hỏi thẳng – Đáp thật</h2>
+                <p class="section-subtitle">
+                    Đừng để vài thắc mắc nhỏ ngăn cản bạn kiếm tiền.
+                </p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>AIHUBS có giúp tôi tăng thu nhập không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Có. Nhưng không phải ma thuật. AIHUBS cho bạn công cụ, kiến thức và lộ trình rõ ràng. Còn lại
+                            phụ thuộc vào việc bạn áp dụng thế nào. Hơn 1.200 thành viên đã dùng để viết content nhanh
+                            hơn 5 lần, tạo ảnh miễn phí, tự động hóa quy trình → tiết kiệm thời gian = kiếm được nhiều
+                            hơn.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Tôi không rành công nghệ, có dùng được không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Được. AIHUBS thiết kế cho người không rành tech. Mọi thứ đều có video hướng dẫn từng bước,
+                            prompt copy-paste là chạy. Nếu bạn biết dùng Facebook, bạn dùng được AI.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Tôi bận, liệu có đủ thời gian học không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Bạn không cần "học". Bạn chỉ cần "dùng". Mỗi prompt trong thư viện AIHUBS là 1 công thức có
+                            sẵn. Copy → Paste → Chạy. 5-10 phút/ngày là đủ để bạn áp dụng ngay vào công việc.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Có bảo hành hoàn tiền không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Có. Trong vòng 7 ngày, nếu bạn thấy AIHUBS không phù hợp, chúng tôi hoàn lại 100% tiền. Không
+                            hỏi lý do. Không drama.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Tại sao không tự học free trên Youtube?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Được. Nhưng bạn sẽ mất 30-50 giờ lọc thông tin, thử sai, bị overwhelm bởi quá nhiều lựa chọn.
+                            AIHUBS đã làm việc đó cho bạn: chọn lọc, test thật, đóng gói thành lộ trình rõ ràng. Bạn chỉ
+                            cần đi theo và thực hành.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Membership có tự động gia hạn không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Không. Bạn chỉ trả 1 lần cho gói bạn chọn (3 hoặc 6 tháng). Hết hạn muốn tiếp tục thì mới gia
+                            hạn. Không tự động trừ tiền, không bẫy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quyen-loi" class="final-cta-section">
+        <div class="container">
+            <h2 class="section-title">Giá bằng một bữa lẩu.<br>Giá trị bằng cả sự nghiệp.</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card comparison-bad">
+                    <h3>Lựa chọn 1: Tiếp tục mò mẫm</h3>
+                    <ul class="comparison-list">
+                        <li>❌ Mất 30–50 giờ search thông tin rời rạc</li>
+                        <li>❌ Thử sai, lãng phí tiền vào tool vô dụng</li>
+                        <li>❌ Stress vì công nghệ thay đổi quá nhanh</li>
+                        <li>❌ Không biết bắt đầu từ đâu</li>
+                        <li>❌ Chạy theo trend, không có hệ thống</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card comparison-good">
+                    <h3>Lựa chọn 2: Lấy luôn đáp án</h3>
+                    <ul class="comparison-list">
+                        <li>✅ Đi nhanh hơn 10 lần với lộ trình rõ ràng</li>
+                        <li>✅ Áp dụng ngay hôm nay, thấy kết quả tuần sau</li>
+                        <li>✅ Có cộng đồng hỗ trợ khi bí</li>
+                        <li>✅ Được update công cụ mới liên tục</li>
+                        <li>✅ Tự tin khi AI thay đổi → bạn đã có nền</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="value-box">
+                <h3>Bạn sẽ sở hữu:</h3>
+                <div class="value-grid">
+                    <div class="value-item">
+                        <span class="value-icon">📚</span>
+                        <div>
+                            <strong>Thư viện 500+ Prompt AI</strong>
+                            <p>Giá trị: 3.000.000đ</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">🎓</span>
+                        <div>
+                            <strong>Khóa học AI từ Zero</strong>
+                            <p>Giá trị: 2.500.000đ</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">🤖</span>
+                        <div>
+                            <strong>Bộ Custom GPTs</strong>
+                            <p>Giá trị: 4.000.000đ</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">🗺️</span>
+                        <div>
+                            <strong>Bản đồ kiếm tiền AI</strong>
+                            <p>Giá trị: 1.500.000đ</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">👥</span>
+                        <div>
+                            <strong>Cộng đồng Private</strong>
+                            <p>Giá trị: 1.000.000đ</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">⚡</span>
+                        <div>
+                            <strong>Danh sách AI độc quyền</strong>
+                            <p>Vô giá</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="value-total">
+                    <p>Tổng giá trị: <strong>12.000.000đ+</strong></p>
+                    <p class="value-price">Giá hôm nay: <span>499.000đ</span></p>
+                </div>
+                <a href="#bang-gia" class="btn btn-primary btn-large btn-cta-final">Đầu tư ngay – Chỉ 499K</a>
+                <p class="guarantee">🔒 Bảo hành hoàn tiền 100% trong 7 ngày</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">AIHUBS</div>
+                    <p class="footer-tagline">Nền tảng giúp bạn làm chủ AI với thư viện Prompt và Công cụ được tuyển
+                        chọn kỹ lưỡng.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Sản phẩm</h4>
+                        <ul>
+                            <li><a href="#thu-vien-prompt">Thư viện Prompt</a></li>
+                            <li><a href="#khoa-hoc-ai">Khóa học AI</a></li>
+                            <li><a href="#cong-cu-ai">Công cụ AI</a></li>
+                            <li><a href="#bang-gia">Bảng giá</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Về chúng tôi</h4>
+                        <ul>
+                            <li><a href="#">Tin tức AI</a></li>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Hỗ trợ</h4>
+                        <ul>
+                            <li><a href="#">Trung tâm trợ giúp</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIHUBS. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

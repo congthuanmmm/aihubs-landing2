@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Logo Downloader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            color: #f5eb82;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #b3b3b3;
+        }
+
+        .controls {
+            background: #1a1a1a;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        button {
+            background: #f5eb82;
+            color: #0a0a0a;
+            border: none;
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #f2e456;
+            transform: translateY(-2px);
+        }
+
+        button:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .progress {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #b3b3b3;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #f5eb82;
+            transition: width 0.3s;
+            width: 0%;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .tool-item {
+            background: #1a1a1a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .tool-item.success {
+            border-color: #4caf50;
+        }
+
+        .tool-item.error {
+            border-color: #f44336;
+        }
+
+        .tool-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .tool-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .tool-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .tool-status {
+            font-size: 12px;
+            color: #b3b3b3;
+        }
+
+        .status-success {
+            color: #4caf50;
+        }
+
+        .status-error {
+            color: #f44336;
+        }
+
+        .instructions {
+            background: rgba(245, 235, 130, 0.1);
+            border: 1px solid rgba(245, 235, 130, 0.3);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 32px;
+        }
+
+        .instructions h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: #f5eb82;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 AI Tools Logo Downloader</h1>
+            <p class="subtitle">Tải logo của 64 công cụ AI về máy để tích hợp vào website</p>
+        </header>
+
+        <div class="controls">
+            <button id="downloadBtn" onclick="downloadAllLogos()">Tải Tất Cả Logo</button>
+            <div class="progress" id="progress" style="display: none;">
+                <span id="progressText">Đang tải: 0/64</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tools-grid" id="toolsGrid"></div>
+
+        <div class="instructions">
+            <h2>📝 Hướng dẫn sử dụng</h2>
+            <ol>
+                <li><strong>Bước 1:</strong> Nhấn nút "Tải Tất Cả Logo" để bắt đầu tải logo</li>
+                <li><strong>Bước 2:</strong> Logo sẽ được tải về thư mục <code>Downloads</code> của bạn</li>
+                <li><strong>Bước 3:</strong> Di chuyển tất cả logo vào thư mục
+                    <code>d:\Code\aihubs-landing\logos\</code></li>
+                <li><strong>Bước 4:</strong> Chạy script tích hợp để cập nhật website</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const TOOLS = [
+            { name: "Decktopus", domain: "decktopus.com" },
+            { name: "Taskade", domain: "taskade.com" },
+            { name: "TextCortex AI", domain: "textcortex.com" },
+            { name: "Everneed AI", domain: "everneedai.com" },
+            { name: "Easygen", domain: "easygen.io" },
+            { name: "Advomate", domain: "advomate.cz" },
+            { name: "Ailawyer", domain: "ailawyer.pro" },
+            { name: "Apify", domain: "apify.com" },
+            { name: "Meetcody", domain: "meetcody.ai" },
+            { name: "Easy-peasy", domain: "easy-peasy.ai" },
+            { name: "SEO Writing", domain: "seowriting.ai" },
+            { name: "LIVE CHAT AI", domain: "livechat.com" },
+            { name: "VOILA AI", domain: "getvoila.ai" },
+            { name: "AI SEO", domain: "aiseo.ai" },
+            { name: "Lovable", domain: "lovable.dev" },
+            { name: "Readdy", domain: "readdy.ai" },
+            { name: "Affitor", domain: "affitor.com" },
+            { name: "Aitoptools", domain: "aitoptools.com" },
+            { name: "Klap", domain: "klap.app" },
+            { name: "logomeai", domain: "logomeai.com" },
+            { name: "writecream", domain: "writecream.com" },
+            { name: "10web", domain: "10web.io" },
+            { name: "Alphana", domain: "alphana.ai" },
+            { name: "Clipto", domain: "clipto.com" },
+            { name: "Beforesunset", domain: "beforesunset.ai" },
+            { name: "Mylens", domain: "mylens.ai" },
+            { name: "Originality", domain: "originality.ai" },
+            { name: "Winston", domain: "gowinston.ai" },
+            { name: "Coral", domain: "getcoralai.com" },
+            { name: "Notta", domain: "notta.ai" },
+            { name: "Gamma", domain: "gamma.app" },
+            { name: "SlideAi", domain: "slidesai.io" },
+            { name: "Anara", domain: "anara.com" },
+            { name: "Pdfai", domain: "pdf.ai" },
+            { name: "youlearn ai", domain: "youlearn.ai" },
+            { name: "Jogg", domain: "jogg.ai" },
+            { name: "Heygen", domain: "heygen.com" },
+            { name: "Fliki", domain: "fliki.ai" },
+            { name: "Magiclight", domain: "magiclight.ai" },
+            { name: "VideoGen", domain: "videogen.io" },
+            { name: "MakeUGC", domain: "makeugc.ai" },
+            { name: "Dupdub", domain: "dupdub.com" },
+            { name: "Akool", domain: "akool.com" },
+            { name: "Arcads", domain: "arcads.ai" },
+            { name: "Argil", domain: "argil.ai" },
+            { name: "Storyshort", domain: "storyshort.ai" },
+            { name: "Aitubo", domain: "aitubo.ai" },
+            { name: "BetterPic", domain: "betterpic.io" },
+            { name: "Pikzels", domain: "pikzels.com" },
+            { name: "Funfunart", domain: "funfun.art" },
+            { name: "Flux", domain: "flux-ai.io" },
+            { name: "Imagine", domain: "imagine.art" },
+            { name: "Sellerpic", domain: "sellerpic.ai" },
+            { name: "basedlabs", domain: "basedlabs.ai" },
+            { name: "Promeai", domain: "promeai.pro" },
+            { name: "Elevenlabs", domain: "elevenlabs.io" },
+            { name: "Ausynclab", domain: "ausynclab.io" },
+            { name: "Vbee", domain: "vbee.vn" },
+            { name: "Mubert", domain: "mubert.com" },
+            { name: "Make", domain: "make.com" },
+            { name: "Pipedream", domain: "pipedream.com" },
+            { name: "Pabbly", domain: "pabbly.com" },
+            { name: "Albato", domain: "albato.com" }
+        ];
+
+        function renderToolsGrid() {
+            const grid = document.getElementById('toolsGrid');
+            TOOLS.forEach(tool => {
+                const item = document.createElement('div');
+                item.className = 'tool-item';
+                item.id = `tool-${tool.name.toLowerCase().replace(/\s+/g, '-')}`;
+                item.innerHTML = `
+                    <div class="tool-logo">
+                        <span style="font-size: 32px;">⏳</span>
+                    </div>
+                    <div class="tool-name">${tool.name}</div>
+                    <div class="tool-status">Chưa tải</div>
+                `;
+                grid.appendChild(item);
+            });
+        }
+
+        async function downloadLogo(tool, index) {
+            const logoUrl = `https://logo.clearbit.com/${tool.domain}`;
+            const itemId = `tool-${tool.name.toLowerCase().replace(/\s+/g, '-')}`;
+            const item = document.getElementById(itemId);
+            const logoDiv = item.querySelector('.tool-logo');
+            const statusDiv = item.querySelector('.tool-status');
+
+            try {
+                // Test if logo exists
+                const response = await fetch(logoUrl);
+                if (response.ok) {
+                    // Create download link
+                    const link = document.createElement('a');
+                    link.href = logoUrl;
+                    link.download = `${tool.name.toLowerCase().replace(/\s+/g, '-')}.png`;
+                    link.click();
+
+                    // Update UI
+                    logoDiv.innerHTML = `<img src="${logoUrl}" alt="${tool.name}">`;
+                    statusDiv.textContent = '✓ Đã tải';
+                    statusDiv.className = 'tool-status status-success';
+                    item.classList.add('success');
+
+                    return true;
+                } else {
+                    throw new Error('Logo not found');
+                }
+            } catch (error) {
+                // Try Google favicon as fallback
+                const faviconUrl = `https://www.google.com/s2/favicons?domain=${tool.domain}&sz=128`;
+
+                try {
+                    const link = document.createElement('a');
+                    link.href = faviconUrl;
+                    link.download = `${tool.name.toLowerCase().replace(/\s+/g, '-')}.png`;
+                    link.click();
+
+                    logoDiv.innerHTML = `<img src="${faviconUrl}" alt="${tool.name}">`;
+                    statusDiv.textContent = '✓ Favicon';
+                    statusDiv.className = 'tool-status status-success';
+                    item.classList.add('success');
+
+                    return true;
+                } catch (e) {
+                    logoDiv.innerHTML = `<span style="font-size: 32px;">❌</span>`;
+                    statusDiv.textContent = '✗ Lỗi';
+                    statusDiv.className = 'tool-status status-error';
+                    item.classList.add('error');
+                    return false;
+                }
+            }
+        }
+
+        async function downloadAllLogos() {
+            const btn = document.getElementById('downloadBtn');
+            const progress = document.getElementById('progress');
+            const progressText = document.getElementById('progressText');
+            const progressFill = document.getElementById('progressFill');
+
+            btn.disabled = true;
+            progress.style.display = 'block';
+
+            let completed = 0;
+            let success = 0;
+
+            for (let i = 0; i < TOOLS.length; i++) {
+                const tool = TOOLS[i];
+                const result = await downloadLogo(tool, i);
+
+                completed++;
+                if (result) success++;
+
+                const percent = (completed / TOOLS.length) * 100;
+                progressText.textContent = `Đang tải: ${completed}/${TOOLS.length} (Thành công: ${success})`;
+                progressFill.style.width = `${percent}%`;
+
+                // Small delay between downloads
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+
+            btn.disabled = false;
+            progressText.textContent = `✓ Hoàn thành! Đã tải: ${success}/${TOOLS.length} logo`;
+            alert(`Đã tải xong ${success}/${TOOLS.length} logo!\n\nHãy kiểm tra thư mục Downloads và di chuyển các file logo vào thư mục logos/ của dự án.`);
+        }
+
+        // Initialize
+        renderToolsGrid();
+    </script>
+</body>
+
+</html>

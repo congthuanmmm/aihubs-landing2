@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện Công Cụ AI - AIHUBS</title>
+    <meta name="description"
+        content="Khám phá thư viện 64+ công cụ AI được tuyển chọn kỹ lưỡng. Tìm công cụ AI phù hợp cho writing, marketing, video, image và nhiều hơn nữa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="directory.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">AIHUBS</a>
+                <nav class="nav">
+                    <a href="index.html#thu-vien-prompt">Thư viện Prompt</a>
+                    <a href="index.html#khoa-hoc-ai">Khóa học AI</a>
+                    <a href="tools-directory.html" class="active">Công cụ AI</a>
+                    <a href="index.html#bang-gia">Bảng giá</a>
+                    <a href="index.html#blog">Blog</a>
+                </nav>
+                <a href="index.html#bang-gia" class="btn btn-primary btn-login">Đăng Nhập</a>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="directory-page">
+        <!-- Hero Section - Decision Engine -->
+        <section class="directory-hero-premium">
+            <div class="directory-container">
+                <div class="hero-content-premium">
+                    <h1 class="hero-title-premium">
+                        Chọn Đúng <span class="highlight">Công Cụ AI</span><br>
+                        Trong 30 Giây
+                    </h1>
+                    <p class="hero-subtitle-premium">
+                        Tìm Theo Nhu Cầu, Lọc Theo Giá Và Độ Phù Hợp. Không Cần Thử Từng Công Cụ.
+                    </p>
+
+                    <!-- Hero Search Bar -->
+                    <div class="hero-search-wrapper">
+                        <div class="search-input-enhanced">
+                            <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <input type="text" id="heroSearchInput" class="hero-search-input"
+                                placeholder="Bạn muốn AI giúp việc gì? (viết content, làm video, học tập, tự động hóa...)"
+                                autocomplete="off" />
+                            <button class="filter-advanced-toggle" id="advancedFilterToggle">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M3 6h12M6 10h6M8 14h2" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                                Lọc nâng cao
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Quick Intent Chips -->
+                    <div class="quick-intent-chips">
+                        <button class="intent-chip" data-intent="AI Writing & Productivity">
+                            Viết nội dung
+                        </button>
+                        <button class="intent-chip" data-intent="AI Marketing & Online Business">
+                            Làm marketing
+                        </button>
+                        <button class="intent-chip" data-intent="AI Video">
+                            Tạo video
+                        </button>
+                        <button class="intent-chip" data-intent="Ai WorkFlow">
+                            Tự động hóa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Bar - 2 Tầng -->
+        <div class="filter-bar-sticky" id="filterBarSticky">
+            <div class="directory-container">
+                <!-- Tầng 1: Category Pills -->
+                <div class="filter-tier-1">
+                    <div class="category-pills">
+                        <button class="category-pill active" data-category="all">Tất cả</button>
+                        <button class="category-pill" data-category="AI Writing & Productivity">AI Writing &
+                            Productivity</button>
+                        <button class="category-pill" data-category="AI Marketing & Online Business">AI
+                            Marketing</button>
+                        <button class="category-pill" data-category="AI Learning & eLearning Tools">AI Learning</button>
+                        <button class="category-pill" data-category="AI Video">AI Video</button>
+                        <button class="category-pill" data-category="AI Image & Photo">AI Image</button>
+                        <button class="category-pill" data-category="AI Audio">AI Audio</button>
+                        <button class="category-pill" data-category="Ai WorkFlow">AI Workflow</button>
+                    </div>
+                </div>
+
+                <!-- Tầng 2: Advanced Filters + Sort -->
+                <div class="filter-tier-2" id="advancedFilters">
+                    <div class="filter-controls-left">
+                        <select class="filter-select" id="filterPrice">
+                            <option value="">Giá</option>
+                            <option value="free">Free</option>
+                            <option value="freemium">Freemium</option>
+                            <option value="paid">Paid</option>
+                        </select>
+
+                        <select class="filter-select" id="filterLevel">
+                            <option value="">Độ phù hợp</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+
+                        <select class="filter-select" id="filterPlatform">
+                            <option value="">Nền tảng</option>
+                            <option value="web">Web</option>
+                            <option value="mobile">Mobile</option>
+                            <option value="extension">Extension</option>
+                        </select>
+
+                        <select class="filter-select" id="filterLanguage">
+                            <option value="">Ngôn ngữ</option>
+                            <option value="vietnamese">Có tiếng Việt</option>
+                            <option value="english">English Only</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-controls-right">
+                        <select class="sort-select" id="sortSelect">
+                            <option value="popular">Phổ biến</option>
+                            <option value="newest">Mới nhất</option>
+                            <option value="rating">Đánh giá cao</option>
+                        </select>
+
+                        <button class="clear-filters-btn" id="clearFiltersBtn" style="display: none;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                            Xóa bộ lọc
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured AI Tools Section -->
+        <section class="featured-tools-section">
+            <div class="directory-container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="icon">✨</span>
+                        AI Nổi Bật Nhất
+                    </h2>
+                </div>
+
+                <div class="featured-tools-scroll">
+                    <div class="featured-tools-grid" id="featuredToolsGrid">
+                        <!-- Featured tools will be loaded here by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Tools Grid Section -->
+        <section class="directory-tools" id="all-tools">
+            <div class="directory-container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="icon">📋</span>
+                        <span id="sectionTitleText">Tất Cả AI</span>
+                    </h2>
+                </div>
+
+                <!-- Results Header -->
+                <div class="results-header" style="display: none;">
+                    <div class="results-count centered-count">
+                        <span class="count-number" id="toolsCount">64</span> công cụ
+                    </div>
+                    <div class="results-filters-applied" id="filtersApplied" style="display: none;">
+                        Đã lọc theo: <span id="filtersList" class="filters-list-tags"></span>
+                    </div>
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <div class="empty-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2" opacity="0.2" />
+                            <path d="M28 28a8 8 0 1 0 8 8M52 52l-8-8" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="empty-title">Không tìm thấy công cụ phù hợp</h3>
+                    <p class="empty-description">Thử từ khóa khác hoặc xóa bớt bộ lọc</p>
+                    <button class="btn btn-primary" id="clearFromEmpty">Xóa bộ lọc</button>
+                </div>
+
+                <!-- Skeleton Loading -->
+                <div class="skeleton-grid" id="skeletonLoading" style="display: none;">
+                    <div class="skeleton-card">
+                        <div class="skeleton-card-header">
+                            <div class="skeleton-logo"></div>
+                            <div style="flex: 1;">
+                                <div class="skeleton-text" style="width: 60%; margin-bottom: 8px;"></div>
+                                <div class="skeleton-text" style="width: 40%; height: 12px;"></div>
+                            </div>
+                        </div>
+                        <div class="skeleton-text" style="width: 100%; margin: 12px 0;"></div>
+                        <div class="skeleton-text" style="width: 90%; margin-bottom: 12px;"></div>
+                        <div class="skeleton-text" style="width: 50%;"></div>
+                    </div>
+                    <div class="skeleton-card">
+                        <div class="skeleton-card-header">
+                            <div class="skeleton-logo"></div>
+                            <div style="flex: 1;">
+                                <div class="skeleton-text" style="width: 60%; margin-bottom: 8px;"></div>
+                                <div class="skeleton-text" style="width: 40%; height: 12px;"></div>
+                            </div>
+                        </div>
+                        <div class="skeleton-text" style="width: 100%; margin: 12px 0;"></div>
+                        <div class="skeleton-text" style="width: 90%; margin-bottom: 12px;"></div>
+                        <div class="skeleton-text" style="width: 50%;"></div>
+                    </div>
+                    <div class="skeleton-card">
+                        <div class="skeleton-card-header">
+                            <div class="skeleton-logo"></div>
+                            <div style="flex: 1;">
+                                <div class="skeleton-text" style="width: 60%; margin-bottom: 8px;"></div>
+                                <div class="skeleton-text" style="width: 40%; height: 12px;"></div>
+                            </div>
+                        </div>
+                        <div class="skeleton-text" style="width: 100%; margin: 12px 0;"></div>
+                        <div class="skeleton-text" style="width: 90%; margin-bottom: 12px;"></div>
+                        <div class="skeleton-text" style="width: 50%;"></div>
+                    </div>
+                    <div class="skeleton-card">
+                        <div class="skeleton-card-header">
+                            <div class="skeleton-logo"></div>
+                            <div style="flex: 1;">
+                                <div class="skeleton-text" style="width: 60%; margin-bottom: 8px;"></div>
+                                <div class="skeleton-text" style="width: 40%; height: 12px;"></div>
+                            </div>
+                        </div>
+                        <div class="skeleton-text" style="width: 100%; margin: 12px 0;"></div>
+                        <div class="skeleton-text" style="width: 90%; margin-bottom: 12px;"></div>
+                        <div class="skeleton-text" style="width: 50%;"></div>
+                    </div>
+                </div>
+
+                <div class="tools-grid" id="directoryToolsGrid">
+                    <!-- Tools will be loaded by JavaScript -->
+                </div>
+
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p class="no-results-title">😔 Không tìm thấy công cụ nào phù hợp</p>
+                    <p class="no-results-text">Thử tìm kiếm với từ khóa khác hoặc chọn category khác.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">AIHUBS</div>
+                    <p class="footer-tagline">Nền tảng giúp bạn làm chủ AI với thư viện Prompt và Công cụ được tuyển
+                        chọn kỹ lưỡng.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Sản phẩm</h4>
+                        <ul>
+                            <li><a href="index.html#thu-vien-prompt">Thư viện Prompt</a></li>
+                            <li><a href="index.html#khoa-hoc-ai">Khóa học AI</a></li>
+                            <li><a href="tools-directory.html">Công cụ AI</a></li>
+                            <li><a href="index.html#bang-gia">Bảng giá</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Về chúng tôi</h4>
+                        <ul>
+                            <li><a href="#">Tin tức AI</a></li>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Hỗ trợ</h4>
+                        <ul>
+                            <li><a href="#">Trung tâm trợ giúp</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIHUBS. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="tools-data.js"></script>
+    <script src="directory.js"></script>
+</body>
+
+</html>

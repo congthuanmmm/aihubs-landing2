@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Chi tiết Công cụ - AIHUBS</title>
+    <meta name="description" id="pageDescription" content="Thông tin chi tiết về công cụ AI">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tool-detail.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">AIHUBS</a>
+                <nav class="nav">
+                    <a href="index.html#thu-vien-prompt">Thư viện Prompt</a>
+                    <a href="index.html#khoa-hoc-ai">Khóa học AI</a>
+                    <a href="tools-directory.html">Công cụ AI</a>
+                    <a href="index.html#bang-gia">Bảng giá</a>
+                    <a href="index.html#blog">Blog</a>
+                    <a href="#" class="nav-login">Đăng nhập</a>
+                    <a href="index.html#bang-gia" class="btn btn-primary">Bắt đầu ngay</a>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="tool-detail-page">
+        <div class="container-wide">
+            <div class="tool-detail-layout">
+                <!-- Main Content Column -->
+                <div class="tool-detail-main">
+                    <!-- Tool Header -->
+                    <div class="tool-header-section">
+                        <div class="tool-header-top">
+                            <div class="tool-logo-large" id="toolLogoLarge">
+                                <img src="" alt="" id="toolLogoImg">
+                            </div>
+                            <div class="tool-header-info">
+                                <div class="tool-title-row">
+                                    <h1 class="tool-title-large" id="toolTitleLarge"></h1>
+                                    <span class="verified-badge">✓ ĐÃ XÁC THỰC</span>
+                                </div>
+                                <div class="tool-rating-row">
+                                    <div class="stars-large" id="toolStarsLarge"></div>
+                                    <span class="rating-score" id="toolRatingScore">5.0</span>
+                                    <span class="rating-count" id="toolRatingCount">(8)</span>
+                                    <span class="tool-views-large" id="toolViewsLarge">📊 237</span>
+                                </div>
+                                <p class="tool-description-large" id="toolDescriptionLarge"></p>
+                                <div class="tool-actions">
+                                    <a href="#" class="btn btn-primary btn-large" id="visitWebsiteBtn" target="_blank"
+                                        rel="noopener">
+                                        Truy cập Website ↗
+                                    </a>
+                                    <button class="btn btn-outline" id="saveToolBtn">
+                                        🔖 Lưu lại
+                                    </button>
+                                </div>
+                                <div class="tool-updated">
+                                    Cập nhật: <span id="toolUpdated">1/12/2025</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Metadata -->
+                        <div class="tool-metadata">
+                            <div class="metadata-item">
+                                <span class="metadata-label">DANH MỤC</span>
+                                <div class="metadata-tags" id="toolCategories"></div>
+                            </div>
+                            <div class="metadata-item">
+                                <span class="metadata-label">GIÁ</span>
+                                <span class="price-badge" id="toolPriceBadge">Freemium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabs Navigation -->
+                    <div class="tabs-navigation">
+                        <button class="tab-btn active" data-tab="intro">
+                            Giới thiệu <span id="tabToolName1"></span>
+                        </button>
+                        <button class="tab-btn" data-tab="reviews">
+                            Đánh giá <span id="tabToolName2"></span>
+                        </button>
+                        <button class="tab-btn" data-tab="alternatives">
+                            <span id="tabToolName3"></span> Thay thế
+                        </button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content active" id="intro-tab">
+                        <!-- Giới thiệu -->
+                        <section class="content-section">
+                            <h2 class="section-icon-title">ℹ️ Giới thiệu <span id="introToolName"></span></h2>
+                            <div class="section-content" id="toolIntro"></div>
+                        </section>
+
+                        <!-- Tính năng nổi bật -->
+                        <section class="content-section">
+                            <h2 class="section-icon-title">✨ Tính năng nổi bật</h2>
+                            <div class="features-grid" id="toolFeatures"></div>
+                        </section>
+
+                        <!-- Ưu & Nhược điểm -->
+                        <section class="content-section">
+                            <h2 class="section-icon-title">Ưu & Nhược điểm</h2>
+                            <div class="pros-cons-grid">
+                                <div class="pros-box">
+                                    <h3 class="pros-title">👍 Ưu điểm</h3>
+                                    <ul class="pros-list" id="toolPros"></ul>
+                                </div>
+                                <div class="cons-box">
+                                    <h3 class="cons-title">❌ Nhược điểm</h3>
+                                    <ul class="cons-list" id="toolCons"></ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Ai đang sử dụng -->
+                        <section class="content-section">
+                            <h2 class="section-icon-title">👥 Ai đang sử dụng <span id="usersToolName"></span>?</h2>
+                            <div class="section-content" id="toolTargetAudience"></div>
+                        </section>
+
+                        <!-- Bảng giá -->
+                        <section class="content-section">
+                            <h2 class="section-icon-title">💵 Bảng giá</h2>
+                            <div class="section-content" id="toolPricing"></div>
+                        </section>
+
+                        <!-- Tiêu chí đánh giá -->
+                        <section class="content-section">
+                            <h2 class="section-icon-title">📊 Tiêu chí đánh giá</h2>
+                            <div class="ratings-grid" id="toolRatingsBreakdown"></div>
+                        </section>
+
+                        <!-- Tổng kết -->
+                        <section class="content-section">
+                            <h2 class="section-icon-title">📝 Tổng kết</h2>
+                            <div class="conclusion-box" id="toolConclusion"></div>
+                        </section>
+                    </div>
+
+                    <div class="tab-content" id="reviews-tab">
+                        <p>Phần đánh giá đang được phát triển...</p>
+                    </div>
+
+                    <div class="tab-content" id="alternatives-tab">
+                        <p>Phần công cụ thay thế đang được phát triển...</p>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="tool-detail-sidebar">
+                    <!-- Premium Access Widget -->
+                    <div class="sidebar-widget premium-widget">
+                        <div class="premium-badge">⚡ PREMIUM ACCESS</div>
+                        <h3 class="widget-title">Làm Chủ AI</h3>
+                        <p class="widget-description">
+                            Truy cập ngay khóa học Premium và bộ Prompt chuyên sâu để làm chủ công cụ này.
+                        </p>
+                        <ul class="premium-features">
+                            <li>✓ Khóa học AI chuyên sâu</li>
+                            <li>✓ Video hướng dẫn thực chiến</li>
+                            <li>✓ Prompt Library độc quyền</li>
+                            <li>✓ Cập nhật hàng tuần</li>
+                        </ul>
+                        <a href="index.html#bang-gia" class="btn btn-primary btn-block">
+                            BẮT ĐẦU NGAY →
+                        </a>
+                    </div>
+
+                    <!-- Trending Tools Widget -->
+                    <div class="sidebar-widget trending-widget">
+                        <h3 class="widget-title">⚡ TOP AI THỊNH HÀNH</h3>
+                        <div class="trending-list" id="trendingTools">
+                            <!-- Will be populated by JS -->
+                        </div>
+                        <a href="tools-directory.html" class="widget-link">Xem tất cả →</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">AIHUBS</div>
+                    <p class="footer-tagline">Nền tảng giúp bạn làm chủ AI với thư viện Prompt và Công cụ được tuyển
+                        chọn kỹ lưỡng.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Sản phẩm</h4>
+                        <ul>
+                            <li><a href="index.html#thu-vien-prompt">Thư viện Prompt</a></li>
+                            <li><a href="index.html#khoa-hoc-ai">Khóa học AI</a></li>
+                            <li><a href="tools-directory.html">Công cụ AI</a></li>
+                            <li><a href="index.html#bang-gia">Bảng giá</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Về chúng tôi</h4>
+                        <ul>
+                            <li><a href="#">Tin tức AI</a></li>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Hỗ trợ</h4>
+                        <ul>
+                            <li><a href="#">Trung tâm trợ giúp</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIHUBS. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="tools-data.js"></script>
+    <script src="tools-extended-data.js"></script>
+    <script src="tool-detail.js"></script>
+</body>
+
+</html>
